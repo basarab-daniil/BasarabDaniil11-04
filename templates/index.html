@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {%if lista%}
+        <ul>
+            {%for elemento in lista%}
+                <li>
+                    {{elemento}}
+                </li>
+            {%endfor%}
+        </ul>
+    {%else%}
+    <p>lista vuota!</p>
+    {%endif%}
+
+    <form action="/modifica" method="post">
+        <label>Aggiungi a lista:
+        <input type="text" name="valore" value="Metti un valore per la lista" required>
+        </label><br><br>
+        <button type="submit">Salva</button>
+        </form>
+</body>
+
+</html>
